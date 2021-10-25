@@ -2,6 +2,12 @@
 
 {% block content %}
 <br><br>
-<h1></h1>
+{% for rec in records %}
+    <div class="bg-black text-light border rounded m-2 p-3">
+        <h3>{{rec.record_title}}</h3>
+        <h5 class="lead">{{rec.record_text}}</h5>
+        <p>{{rec.author_name}}</p>
+    </div>
+{% endfor %}
 <br><br>
 {% endblock %}
